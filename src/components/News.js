@@ -32,7 +32,7 @@ const News = (props) => {
     setLoading(false)
   }
   const handleNextClick = async () => {
-    let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=36a0e1c29ccb4195bd9501d40fb3394d&page=${page + 1}&pageSize=${props.pageSize}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page + 1}&pageSize=${props.pageSize}`;
     setLoading(true)
     let data = await fetch(url);
     let parseData = await data.json();
